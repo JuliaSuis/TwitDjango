@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+	<title>Text Mining project</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+</head>
+
+<body class="textmining">
+
+        <div class="cover">
+
+			<div class="cover-image" style="background-image : url('https://pp.vk.me/c636918/v636918325/17a5c/8VJ2e9OW9-U.jpg')"></div>
+
+			<div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+
+                        <h1 class="text-info">Detecting Emotions in Twitter Messages</h1>
+
+                        <p class="text-inverse">Social media and microblog tools are increasingly used by individuals to express their feelings and opinions in the form of short text messages. Detecting emotions in text has a wide range of applications including identifying anxiety
+or depression of individuals and measuring well-being or public mood of a community. In this project, we propose a new approach for automatically classifying text messages of individuals to their emotional states. </p>
+
+                        <br><br>
+
+                        <a class="btn btn-info btn-lg" href="#middle"> Start searching! </a>
+
+                    </div>
+				</div>
+            </div>
+        </div>
+
+	<div class="section" id ="middle">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6"><br>
+
+					<!--form role="form" id="query_form" method="post">
+                     {% csrf_token %}
+						<div class="form-group">
+
+							<label class="control-label" for="query">Enter query</label>
+							<input class="form-control" id="query" type="text">
+
+						</div>
+
+						<button type="submit" name="submit" class="btn btn-default">Search</button>
+
+					</form-->
+                    {% csrf_token %}
+                    <label class="control-label" for="query">Enter query</label><br>
+                    <input id="query" class="form-control" type="text">
+                    <br>
+                    <button type="button" id="button1" class="btn btn-default">Search</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="progress">
+
+						<div class="progress-bar" role="progressbar" style="width: 20%;">20% Complete</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div-->
+
+
+	<div class="section">
+		<div class="container">
+			<div class="row" id="images">
+
+			</div>
+		</div>
+
+
+		<div class="container">
+                	<div class="row"><br><br><br>
+
+				<h1 class="text-center text-primary">Team</h1>
+		  		<br>
+
+                    		<div class="col-md-4">
+
+                        		<img src="{% static 'img/Amit.png' %}" class="center-block img-circle img-responsive">
+                        		<h3 class="text-center">Amit Dilip Patil</h3>
+
+                   		 </div>
+
+
+                    		<div class="col-md-4">
+
+                        		<img src="{% static 'img/Aswin.png' %}" class="center-block img-circle img-responsive">
+                        		<h3 class="text-center">Aswin Pai</h3>
+
+                    		</div>
+
+                    		<div class="col-md-4">
+
+                        		<img src="{% static 'img/Julia.png' %}" class="center-block img-circle img-responsive">
+                        		<h3 class="text-center">Iuliia Semenova</h3>
+
+                    		</div>
+
+                	</div>
+		</div>
+
+            </div>
+
+        </div>
+
+</body>
+
+</html>

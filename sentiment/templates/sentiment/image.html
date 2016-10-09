@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <script>
+
+        $(document).ready(function(){
+            var sen = "{% static 'img/sentiment.png' %}?"+new Date().getTime();
+            var wc = "{% static 'img/wc.png' %}?"+new Date().getTime();
+            var ht = "{% static 'img/hashtag.png' %}?"+new Date().getTime();
+            $("#sen").attr("src", sen);
+            $("#wc").attr("src", wc);
+            $("#ht").attr("src", ht);
+        });
+
+    </script>
+</head>
+<body>
+<div class="col-md-12">
+					<h1 class="text-center text-primary">Tweet Sentiment</h1>
+		  			<br>
+
+					<img width="800" height="600" src="" class = "center-block img-responsive" id="sen">
+
+				</div>
+                <div class="col-md-12">
+					<h1 class="text-center text-primary">Word Cloud</h1>
+		  			<br>
+
+					<img width="800" height="600" src="" class = "center-block img-responsive" id="wc">
+
+				</div>
+                <div class="col-md-12">
+					<h1 class="text-center text-primary">Hashtag Count</h1>
+		  			<br>
+
+					<img width="800" height="600" src="" class = "center-block img-responsive" id="ht">
+
+				</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax !!!</title>
+    <script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#check_login").bind("click", function(event) {
+            alert("Sem");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <label>Login: </label>
+        <input type="text" name="login" id="login" /n>
+    </div>
+    <div>
+        <input type="button" value="Check" id="check_login" />
+    </div>
+</body>
+</html>

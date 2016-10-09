@@ -12,15 +12,6 @@ from django.core.files import File
 from mainfile import change_loc, change
 from ..models import Query
 
-#print("calculating Hashtag Count.........")
-#open(hashtag_file, "w")
-#cnt = Counter();
-#keys_freq = []
-#values_freq = []
-#id_list = list()
-#keys_freq = []
-#values_freq = []
-
 def hashtag_plot(c):
     xaxis = range(len(c))
     keys_freq = []
@@ -73,8 +64,7 @@ def hash_main():
                         with codecs.open(hashtag_file, 'a', encoding='utf8') as f:
                             myh = File(f)
                             myh.write(ht + '\n')
-                            #???????????????????????????????????????????????????????????????????
-                            #print(ht,file=f)
+
             except KeyError:
                 continue
 

@@ -47,11 +47,6 @@ class listener(StreamListener):
         print (status)
 
 def author():
-    #a = os.getcwd()
-    #print("We are here now " + a)
-    #os.remove('sentiment/code/dataset/tweet_out.txt')
-    #query = change()
-    #query_location = change_loc()
 
     query = Query.objects.all()[len(Query.objects.all()) - 1].tag
     query_location = '/dataset/' + query + '.json'

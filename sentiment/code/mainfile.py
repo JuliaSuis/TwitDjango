@@ -26,11 +26,3 @@ url_sentiment=location+ '/sentiment/code/dataset/' +'url_sentiment.txt'
 hashtag_file=location+ '/sentiment/code/dataset/' +'hashtag.txt'
 hashtag_graph=location+ '/sentiment/static/img/' +'hashtag.png'
 
-#print(query_location)
-#print(dictionary)
-print(tweet_file)
-#print(sentiment_location)
-#print(wc_location)
-#print(url_sentiment)
-#print(hashtag_file)
-#print(hashtag_graph)

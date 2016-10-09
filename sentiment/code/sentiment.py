@@ -131,12 +131,7 @@ def tweet_sentiment(c, p, n, ne):
     print("Total tweets", c)
     result = '%s %d \n%s %.1f%s \n%s %.1f%s \n%s %.1f%s' % ("Total number of tweets:", c, "Positive:", positive, "%", "Negative:", negative, "%", "Neutral:", neutral, "%");
     print(result)
-    # print ("Positive ",float(p/c)*100,"%")
-    # print ("Negative ",float(n/c)*100,"%")
-    # print ("Neutral ",float(ne/c)*100,"%")
 
-
-# def tweet_cleaning():
 
 
 def main():
@@ -148,7 +143,6 @@ def main():
         print("Tweet Sentiment pie chart generated at:", sentiment_location)
         tweet_wordcloud()
         print("Tweet Word Cloud generated at:", wc_location)
-
 
 
 #if __name__ == '__main__':

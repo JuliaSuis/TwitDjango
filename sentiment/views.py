@@ -3,8 +3,7 @@ from django.http import HttpResponse
 from .models import Query
 import codecs
 import os
-from sentiment.code.mainfile import change, change_loc, dictionary, tweet_file, sentiment_location, wc_location
-from sentiment.code.mainfile import dictionary, tweet_file, sentiment_location, wc_location,hashtag_graph
+from sentiment.code.mainfile import dictionary, tweet_file, sentiment_location, wc_location, hashtag_graph
 from sentiment.code.sentiment import print_lines, tweet, tweet_wordcloud
 from sentiment.code.auth import author
 from sentiment.code.hashtag import hash_main
@@ -27,6 +26,8 @@ def main():
         print("Tweet Word Cloud generated at:", wc_location)
     from sentiment.code.hashtag import hash_main
     hash_main()
+    from sentiment.code.url_sentiment import urlssentiment
+    urlssentiment()
 
 
 def index(request):
@@ -46,6 +47,11 @@ def search_query(request):
         )
         try:
             os.remove(tweet_file)
+        except:
+            pass
+
+        try:
+            os.remove(url_sentiment)
         except:
             pass
 

@@ -1,4 +1,4 @@
-Python 3.0
+Python 2.7 (Possible to run in Python3, just add some changes. Notices can be found in the code files.)
 
 Virttualenv (myvenv)
 

@@ -45,6 +45,15 @@ def search_query(request):
         Query.objects.create(
             tag = query
         )
+
+        previousQuery = Query.objects.all()[len(Query.objects.all()) - 2].tag
+        Qlocation = os.getcwd() + '/sentiment/code/dataset/' + previousQuery + '.json'
+        print("Qlocation: ", Qlocation)
+        try:
+            os.remove(Qlocation)
+        except:
+            pass
+
         try:
             os.remove(tweet_file)
         except:

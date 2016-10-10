@@ -11,10 +11,10 @@ import mainfile
 
 
 #consumer key, consumer secret, access token, access secret.
-ckey="Hs2wkeMyz85KcKhDz5lhr4BAx"
-csecret="bVmoVe96e8Igr2XlO1ZvsUmc9q6BsGIqwOGMKdyGZj9h9w1joH"
-atoken="776036277678436353-Ac5qQEoB2NVYXW3ehaiscp65y7KcKuO"
-asecret="9wGhHqrh3U5p31xpSr3Fa8VRdku6aFOTymd7olOFmYZpZ"
+ckey="----enter yours one-------"
+csecret="----enter yours one-------"
+atoken="----enter yours one-------"
+asecret="----enter yours one-------"
 
 #reload(mainfile)
 from mainfile import change_loc, change

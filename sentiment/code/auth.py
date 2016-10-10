@@ -11,10 +11,10 @@ import mainfile
 
 
 #consumer key, consumer secret, access token, access secret.
-ckey="***"
-csecret="***"
-atoken="***"
-asecret="***"
+ckey="Hs2wkeMyz85KcKhDz5lhr4BAx"
+csecret="bVmoVe96e8Igr2XlO1ZvsUmc9q6BsGIqwOGMKdyGZj9h9w1joH"
+atoken="776036277678436353-Ac5qQEoB2NVYXW3ehaiscp65y7KcKuO"
+asecret="9wGhHqrh3U5p31xpSr3Fa8VRdku6aFOTymd7olOFmYZpZ"
 
 #reload(mainfile)
 from mainfile import change_loc, change
@@ -26,7 +26,7 @@ from ..models import Query
 class listener(StreamListener):
     def __init__(self, count):
         self.counter = 0
-        self.limit = 100
+        self.limit = 200
 
     def on_data(self, data):
         query = Query.objects.all()[len(Query.objects.all()) - 1].tag
@@ -53,10 +53,10 @@ def author():
 
     open('./sentiment/code' + query_location, 'w').close()
     try:
-        print("AUTHOR QUERY & QUERY LOC __________________________________" + query + "__" + query_location)
+        #print("AUTHOR QUERY & QUERY LOC" + query + "__" + query_location)
         auth = OAuthHandler(ckey, csecret)
         auth.set_access_token(atoken, asecret)
-        twitterstream = Stream(auth, listener(count=100))
+        twitterstream = Stream(auth, listener(count=200))
         print("Writing Tweets")
         twitterstream.filter(track=[query])#, languages=['en'])
     except KeyboardInterrupt:

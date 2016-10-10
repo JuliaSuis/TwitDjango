@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Query
 import codecs
 import os
-from sentiment.code.mainfile import dictionary, tweet_file, sentiment_location, wc_location, hashtag_graph
+from sentiment.code.mainfile import dictionary, tweet_file, sentiment_location, wc_location, hashtag_graph, url_sentiment
 from sentiment.code.sentiment import print_lines, tweet, tweet_wordcloud
 from sentiment.code.auth import author
 from sentiment.code.hashtag import hash_main
@@ -14,16 +14,16 @@ def main():
     from sentiment.code.mainfile import change_loc, change
     query = change()
     query_location = change_loc()
-    print("query and query_loc in views.py" + query + ", " + query_location)
+    #print("query and query_loc in views.py" + query + ", " + query_location)
     from sentiment.code.sentiment import print_lines, tweet, tweet_wordcloud
     from sentiment.code.auth import author
     author()
     with codecs.open(tweet_file, 'w'):
         print_lines()
         tweet()
-        print("Tweet Sentiment pie chart generated at:", sentiment_location)
+        #print("Tweet Sentiment pie chart generated at:", sentiment_location)
         tweet_wordcloud()
-        print("Tweet Word Cloud generated at:", wc_location)
+        #print("Tweet Word Cloud generated at:", wc_location)
     from sentiment.code.hashtag import hash_main
     hash_main()
     from sentiment.code.url_sentiment import urlssentiment
